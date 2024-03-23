@@ -13,15 +13,23 @@
 2. python 3.10
 
 ### 의존 패치지
-- pip install -r requirements.txt
+- pip install -r /sensor/requirements.txt
 
 
+# 착시창문 플레이어
+## 하드웨어
+1. raspberry pi 5 (4GB ram)
+2. PCle M.2 2230 2280 NVMe [X1001]
+3. 삼성전자 PM991 M2 SSD 128GB
 
+### 개발환경
+1. debian (ubuntu / raspberry pi os)
+2. python 3.10
 
+### 의존 패치지
+- pip install -r /player/requirements.txt
 
-
-
-
+3. 
 ## 함수 설명: find_xy_on_line_at_fz
 
 ### 목적
