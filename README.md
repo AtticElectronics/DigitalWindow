@@ -14,6 +14,8 @@
 
 ### 의존 패치지
 - pip install -r /sensor/requirements.txt
+- pip install opencv-python numpy dlib pyserial opencv-contrib-python
+
 
 
 # 착시창문 플레이어
