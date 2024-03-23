@@ -1,6 +1,27 @@
 # DigitalWindow
 착시 전자창문
 
+
+
+# 스태레오 비전 카메라
+## 하드웨어 
+1. OV5693 USB 카메라 모듈 x2
+2. raspberry pi 5 (4GB ram)
+   
+### 개발환경
+1. debian (ubuntu / raspberry pi os)
+2. python 3.10
+
+### 의존 패치지
+- pip install -r requirements.txt
+
+
+
+
+
+
+
+
 ## 함수 설명: find_xy_on_line_at_fz
 
 ### 목적
