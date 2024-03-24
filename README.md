@@ -24,9 +24,19 @@
 2. PCle M.2 2230 2280 NVMe [X1001]
 3. 삼성전자 PM991 M2 SSD 128GB
 
+### ssd 가속
+1. sudo nano /boot/firmware/config.txt
+2. 아래 내용을 추가
+```
+[all]
+dtparam=pciex1
+dtparam=pciex1_gen=3
+```
+
 ### 개발환경
 1. debian (ubuntu / raspberry pi os)
 2. python 3.10
+
 
 ### 의존 패치지
 - pip install -r /player/requirements.txt
