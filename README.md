@@ -8,7 +8,21 @@
 ## 하드웨어 
 1. OV5693 USB 카메라 모듈 x2
 2. raspberry pi 5 (4GB ram)
-   
+
+- 라즈베이파이os의 펌웨어설정을 수정을 아래처럼 한다.
+- 4단계 쿨링시 카메라나 동글로가는 전력이 부족해져 동작하지않지만 일단 스로틀링을 방지하기위해 쿨링옵션을 수정했다.
+```bash
+$ sudo nano /boot/firmware/config.txt 
+```
+```bash
+dtparam=fan_temp0_speed=180
+dtparam=fan_temp1_speed=200
+dtparam=fan_temp2_speed=220
+dtparam=fan_temp3_speed=250
+```
+
+
+
 ### 개발환경
 1. debian (ubuntu / raspberry pi os)
 2. python 3.10
