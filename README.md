@@ -52,6 +52,11 @@ dtparam=pciex1_gen=3
 1. debian (ubuntu / raspberry pi os)
 2. python 3.10
 
+### 권한관련
+- sudo usermod -a -G gpio username
+- python -m venv --system-site-packages Player
+- sudo pip install gpiozero
+- 이후 Player 가상환경을 사용한다.
 
 ### 의존 패치지
 - pip install -r /player/requirements.txt
