@@ -8,11 +8,9 @@
 1. OV5693 USB 카메라 모듈 x2 (가변초점 사용금지)
 2. raspberry pi 5 (4GB ram)
 
-- 라즈베이파이os의 펌웨어설정을 수정을 아래처럼 한다.(스로틀링 방지)
+### 라즈베이파이os의 펌웨어설정을 수정을 아래처럼 한다.(스로틀링 방지)
 ```bash
 $ sudo nano /boot/firmware/config.txt 
-```
-```bash
 dtparam=fan_temp0_speed=150
 dtparam=fan_temp1_speed=180
 dtparam=fan_temp2_speed=225
@@ -36,8 +34,7 @@ dtoverlay=w1-gpio
 ### ssd 가속
 1. sudo nano /boot/firmware/config.txt
 2. 아래 내용을 추가
-   
-```
+```bash
 [all]
 dtparam=pciex1
 dtparam=pciex1_gen=3
