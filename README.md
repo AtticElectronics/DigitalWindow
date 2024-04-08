@@ -1,7 +1,8 @@
 # DigitalWindow
 # 유튜브 영상제작을 위해 "매우 짧은 시간에 작성된 코드"이기 때문에, 문서화 주석이 없어 알아보려면 상당한 시간이 필요할듯합니다.
-# 정말 코드 구조 설명이 필요하신분은 메일주시면 최대한 도와드리려고 노력하겠습니다.
+# 코드관련해서 정말 설명이 필요하신분은 최대하게 자세한 질문내용을 메일주시면 최대한 도와드리려고 노력하겠습니다.
 ---
+
 # 1. 스태레오 비전 카메라
 ## 하드웨어 
 1. OV5693 USB 카메라 모듈 x2 (가변초점 사용금지)
@@ -18,12 +19,13 @@ dtparam=fan_temp2_speed=225
 dtparam=fan_temp3_speed=250
 dtoverlay=w1-gpio
 ```
-### 의존성 패키지를 설치 후, 해당폴더의 main.py 실행
----
 
 ### 개발환경
 1. debian (raspberry pi os)
 2. python 3.11
+### 의존성 패키지를 설치 후, 해당폴더의 main.py 실행
+
+---
 
 # 2. 착시창문 플레이어
 ## 하드웨어
@@ -40,7 +42,6 @@ dtoverlay=w1-gpio
 dtparam=pciex1
 dtparam=pciex1_gen=3
 ```
-
 ### 개발환경
 1. debian (raspberry pi os)
 2. python 3.11
