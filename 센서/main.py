@@ -349,10 +349,10 @@ class ResultSenderNode(Node):
     def __del__(self):
         self.client.close()
 
-    def __init__(self):
+    def __init__(self,ip='192.168.0.79',port=62035):
         self.fps = 0
         self.last_time = time.time()  # 현재 시간을 캡처
-        self.client = TCPClient('192.168.0.79',62035)
+        self.client = TCPClient(ip,port)
         self.client.connect()
 
     def format_list(self,my_list):
@@ -369,9 +369,8 @@ class ResultSenderNode(Node):
         self.last_time = current_time  # 현재 실행 시간을 마지막 실행 시간으로 업데이트
         # serial_result  = self.communicator.send_message(self.format_list(svm.result))
         self.client.send_message(self.format_list(svm.result))
-        print(f"FPS: {self.fps:.2f}, 무선 USB 전송 >>>", svm.result)
-        
         if svm.DEBUG:
+            print(f"FPS: {self.fps:.2f}, 무선 USB 전송 >>>", svm.result)
             svm.change_state(DebugNode.instance())
         else:
             svm.change_state(CameraReadNode.instance())
@@ -543,8 +542,11 @@ if __name__ == "__main__":
     TemplateMatchingNode(*crop_values,matching_rate = 0.5)
     DebugNode(*crop_values)
     FilterNode(queue_size=10, smoothing_factor=0.4,EFL=1.57,sensor_width_mm=4.54,baseline_m=0.1, px_width=640, px_height=480)
+    
+    # TCP수신받을 프로세스의 포트입력
     ResultSenderNode()
-
+    # ResultSenderNode("localhost",62035)
+    
     init_state = CameraReadNode.instance()
     stereoVison = StereoVisionMachine(init_state, *crop_values,debug=False)
     stereoVison.run()
