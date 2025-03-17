@@ -1,5 +1,4 @@
 from HWinfo import ConnectedCameras
-from HWinfo import SerialCommunicator
 from TcpSocket import TCPClient
 import cv2
 import numpy as np
